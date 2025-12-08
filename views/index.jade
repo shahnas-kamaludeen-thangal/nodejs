@@ -1,0 +1,20 @@
+extends layout
+
+block content
+  if error 
+    h2.text-danger.text-center.bg-warning #{error}
+
+  
+
+block content2 
+  .container
+    .row.justify-content-center.align-items-center.vh-100
+      .col-md-4
+        form(action="/login", method="POST").border.border-secondary.m-5.p-5.rounded.bg-dark.text-light
+          label(for="userName").p-1 User name: 
+          input(type="text" name="userName").p-2.mb-2
+         
+          label(for="password").p-1 Password:
+          input(type="password" name="password" ).p-2.mb-2
+          button(type="submit").btn-primary.p-2.rounded.m-2 LOGIN
+          

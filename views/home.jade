@@ -1,0 +1,41 @@
+extends homeLayout
+
+block content1
+
+  h1.text-center.text-primary Travel Beyond Boundaries
+  .d-flex.justify-content-end.align-items-center.m-2
+    h4.mb-0.m-2 Welcome back #{userName}
+    form(action="/home/signout" method="POST")
+      button(type="submit").btn.btn-primary.p-2.rounded Signout
+
+ 
+  .card.text-center
+   .card-header
+     ul.nav.nav-pills.card-header-pills
+      li.nav-item
+        a.nav-link.active(href="#") Home
+      li.nav-item
+        a.nav-link(href="#") About
+      li.nav-item
+        a.nav-link(href="#",tabindex="-1",aria-disabled="true") Contact
+
+block content2
+  #carouselExampleControls.carousel.slide(data-bs-ride="carousel").col-md-6.mx-auto
+    .carousel-inner
+      .carousel-item.active
+        img.img-fluid(src="https://www.undp.org/sites/g/files/zskgke326/files/migration/pk/PK-Eco-Camping.jpg").d-block
+      .carousel-item
+        img(src="https://img.veenaworld.com/wp-content/uploads/2023/01/shutterstock_2044050407-scaled.jpg" alt="Second slide").d-block.w-100
+      .carousel-item
+        img(src="https://a.cdn-hotels.com/gdcs/production174/d966/b9a8b0ee-f10b-4f3d-adec-6ca81883a6cd.jpg" alt="Third slide").d-block.w-100
+    button.carousel-control-prev(type="button", data-bs-target="#carouselExampleControls", data-bs-slide="prev")
+      span.carousel-control-prev-icon(aria-hidden="true")
+      span.visually-hidden Previous
+
+    button.carousel-control-next(type="button", data-bs-target="#carouselExampleControls", data-bs-slide="next")
+      span.carousel-control-next-icon(aria-hidden="true")
+      span.visually-hidden Next
+
+
+  
+ 
