@@ -15,6 +15,11 @@ block content2
           input(type="text" name="userName").p-2.mb-2
          
           label(for="password").p-1 Password:
-          input(type="password" name="password" ).p-2.mb-2
+           .input-group.mb-2
+              input#password(type="password" name="password").form-control.p-2
+              span.input-group-text
+                i.fas.fa-eye#togglePassword
           button(type="submit").btn-primary.p-2.rounded.m-2 LOGIN
           
+
+       
