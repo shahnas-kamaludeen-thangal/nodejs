@@ -17,6 +17,10 @@ router.get("/", function (req, res, next) {
 router.post("/login", (req, res, next) => {
   console.log(req.body);
   const { userName, password } = req.body;
+  if (!userName || !password) {
+    console.log("User name or password missing.");
+    res.render("index", { error: "User name or Password missing" });
+  }
   if (userName === users.userName && password === users.password) {
     console.log(userName);
     console.log(password);

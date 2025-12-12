@@ -15,6 +15,7 @@ router.post("/signout", (req, res, next) => {
   req.session.destroy((err) => {
     console.log("cleared all");
     if (err) {
+      console.log("error");
       return res.redirect("/home");
     }
     res.clearCookie("connect.sid");
